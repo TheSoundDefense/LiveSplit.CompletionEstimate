@@ -15,9 +15,9 @@ namespace LiveSplit.UI.Components
 
         public string UpdateName => ComponentName;
 
-        public string XMLURL => "";
+        public string UpdateURL => "https://raw.githubusercontent.com/TheSoundDefense/LiveSplit.CompletionEstimate/master/";
 
-        public string UpdateURL => "";
+        public string XMLURL => UpdateURL + "Components/update.LiveSplit.CompletionEstimate.xml";
 
         public Version Version => Version.Parse("1.0.0");
     }
