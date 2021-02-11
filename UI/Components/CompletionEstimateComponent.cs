@@ -149,8 +149,7 @@ namespace LiveSplit.UI.Components
         }
 
         // Builds the data structures needed to calculate completion estimates. This may be called
-        // in the middle of a run, if the comparison or timing method changes. This should only be
-        // called while a run is happening.
+        // in the middle of a run, if the comparison or timing method changes.
         void Initialize(LiveSplitState state)
         {
             ActualComparison = GetActualComparison(state);
@@ -444,6 +443,7 @@ namespace LiveSplit.UI.Components
                         ? $"{CurrentProgress:0.00}%"
                         : $"{CurrentProgress:0.##}%";
                 }
+                // If we can't make an estimate, just display "?".
                 InternalComponent.InformationValue = CurrentProgress >= 0 ? completionFormat : "?";
             }
 
